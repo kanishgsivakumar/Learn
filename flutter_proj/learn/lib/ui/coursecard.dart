@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learn/ui/coursescreen.dart';
-import 'package:learn/ui/videoscreen.dart';
+
 
 class Course{
   final String name,section,subject,teacher,courseid;
@@ -103,7 +103,6 @@ Widget card(BuildContext context ,int index,bool isDark){
           context, 
           MaterialPageRoute(
             builder: (context) => CoursePage(index:index)
-            //builder: (context) => Videoplayer()
           )
           );
       },

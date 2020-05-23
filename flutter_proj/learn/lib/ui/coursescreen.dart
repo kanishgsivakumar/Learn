@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learn/ui/coursecard.dart';
+import 'package:flutter_youtube/flutter_youtube.dart';
+
+
 
 class CoursePage extends StatefulWidget {
   final int index ;
@@ -16,6 +19,26 @@ class _CoursePageState extends State<CoursePage> {
   _CoursePageState({Key key,
     @required this.index
   });
+  final api_key = "AIzaSyAVs71T8Ac3P7LFSoGEa_48u8e9T941BxU";
+
+
+
+  void playYoutubeVideo(String id) {
+    FlutterYoutube.onVideoEnded.listen((onData) {
+      
+    });
+
+    FlutterYoutube.playYoutubeVideoById(
+      apiKey:api_key,
+      videoId: id,
+      appBarColor: Colors.black,
+      fullScreen: true
+    );
+
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     final Brightness brightnesval =MediaQuery.of(context).platformBrightness;
@@ -23,11 +46,12 @@ class _CoursePageState extends State<CoursePage> {
     return DefaultTabController(
         length: 3,
         child:Scaffold(
+          backgroundColor: isDark?Colors.black:Colors.white,
         body:NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
-                backgroundColor: isDark? Colors.black45: Colors.teal,
+                backgroundColor: isDark? Colors.black: Colors.teal,
                 expandedHeight: 200.0,
                 floating: false,
                 pinned: true,
@@ -86,7 +110,9 @@ class _CoursePageState extends State<CoursePage> {
                   padding: EdgeInsets.only(top: 24),
                   itemCount: mycourses[index].v_list.length,
                   itemBuilder:(context,count){
-                    return Container(
+                    return GestureDetector(
+                     child :Container(
+                       alignment: Alignment.center,
                       height: 120,
                       margin: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
                       decoration: BoxDecoration(
@@ -98,19 +124,20 @@ class _CoursePageState extends State<CoursePage> {
                           Padding(
                             child:Icon(Icons.play_circle_outline,
                             size: 40,
-                            color:isDark? Colors.tealAccent:Color(0xff128c7e),
+                            color:isDark? Colors.tealAccent:Colors.teal,
                             ),
                             padding: EdgeInsets.symmetric(horizontal: 16),
                           ),
                           Column(
-                            ch
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children:<Widget>[
                             Flexible(
                             child:Text(
                               mycourses[index].v_list[count].name,
                               overflow: TextOverflow.fade,
-                              softWrap: true,
+                              softWrap: false,
                               style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               fontStyle: FontStyle.normal,
                               decoration: TextDecoration.none,
                               fontWeight: FontWeight.w400,
@@ -118,19 +145,27 @@ class _CoursePageState extends State<CoursePage> {
                               color: isDark?Colors.white: Colors.black,
                               ),
                             ),
-                          )
-                          )
+                          
+                            )
+                            ])
                         ],
                       ),
+                      )
+                     ,
+                     onTap: (){
+                        playYoutubeVideo(mycourses[index].v_list[count].id);
+                     },
                     );
                   }
                   )
               ),
               Container(
-                child:Text("ClassWork")
+                alignment: Alignment.center,
+                child:Text("YAY! No Work Due")
               ),
               Container(
-                child:Text("Backpack")
+                alignment: Alignment.center,
+                child:Text("No Posts Yet")
               )
             ],
           ),
@@ -155,7 +190,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return Container(
       child:Container(
         child: _tabBar,
-        color: isDark? Colors.black45: Colors.teal,
+        color: isDark? Colors.black: Colors.teal,
         ),
     );
   }

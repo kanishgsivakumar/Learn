@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn/ui/appbar.dart';
 import 'package:learn/ui/coursecard.dart';
+import 'package:learn/ui/todoscreen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -54,20 +55,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 return card(context,index,isDark);
                },
               ),
-              Container(alignment: Alignment.center,child:Text("Notifications")),
+              Container(alignment: Alignment.center,child:Text("No New Notifications")),
             ],
           ),
           
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton.extended(
-            onPressed: (){},
-            //backgroundColor:  Color(0xff128c7e),
-            //foregroundColor: Colors.white,
+            onPressed: (){
+              Navigator.push(
+              context, 
+            MaterialPageRoute(
+              builder: (context) => ToDoPage()
+          )
+          );
+            },
             icon: Icon(Icons.assignment),
             label: Text("To Do"),
           ),
           bottomNavigationBar:  BottomAppBar(
-            color: Colors.black45,
+            
             shape:AutomaticNotchedShape(RoundedRectangleBorder(),StadiumBorder(side:BorderSide())),
             notchMargin: 4.0,
             child: TabBar( 
