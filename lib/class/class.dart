@@ -92,3 +92,27 @@ final mycourses = [
     v_list: samplevideo
   ),
 ];
+
+class Work{
+  final int code,sub_code;
+  final String name;
+  final int due_date,due_month,due_year;
+  Work({
+    Key key,
+    @required this.code,
+    @required this.name,
+    @required this.sub_code,
+    @required this.due_date,
+    @required this.due_month,
+    @required this.due_year
+  });
+
+}
+
+var mywork  = <Work>[
+  Work(code: 5, name: "Assesment on Unit 1", sub_code: 1, due_date: 26, due_month: 05, due_year: 2020),
+  Work(code: 1, name: "Assignment 2", sub_code: 3, due_date: 1, due_month: 06, due_year: 2020),
+  Work(code: 1, name: "Assignment 3", sub_code: 3, due_date: 1, due_month: 06, due_year: 2020),
+  Work(code: 2, name: "Assignment 1", sub_code: 3, due_date: 22, due_month: 5, due_year: 2020),
+];
+ 

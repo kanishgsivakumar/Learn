@@ -51,7 +51,7 @@ class _CoursePageState extends State<CoursePage> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
-                backgroundColor: isDark? Colors.black: Colors.teal,
+                backgroundColor: isDark? Colors.black: Colors.blue,
                 expandedHeight: 200.0,
                 floating: false,
                 pinned: true,
@@ -91,11 +91,11 @@ class _CoursePageState extends State<CoursePage> {
                   text:"Wall"
                 ),
               ],
-              labelColor: isDark? Colors.tealAccent:Colors.white,
+              labelColor: isDark? Colors.blueAccent:Colors.white,
               unselectedLabelColor:isDark? Colors.white:Colors.white70,
               indicatorSize: TabBarIndicatorSize.label,
               indicatorPadding: EdgeInsets.all(5.0),
-              indicatorColor: isDark? Colors.tealAccent:Colors.white,
+              indicatorColor: isDark? Colors.blueAccent:Colors.white,
               ),
               isDark
               ),
@@ -124,7 +124,7 @@ class _CoursePageState extends State<CoursePage> {
                           Padding(
                             child:Icon(Icons.play_circle_outline,
                             size: 40,
-                            color:isDark? Colors.tealAccent:Colors.teal,
+                            color:isDark? Colors.blueAccent:Colors.blue,
                             ),
                             padding: EdgeInsets.symmetric(horizontal: 16),
                           ),
@@ -190,13 +190,13 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return Container(
       child:Container(
         child: _tabBar,
-        color: isDark? Colors.black: Colors.teal,
+        color: isDark? Colors.black: Colors.blue,
         ),
     );
   }
 
   @override
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
-    return false;
+    return true;
   }
 }

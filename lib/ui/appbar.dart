@@ -54,7 +54,7 @@ return PreferredSize(
 
   //backgroundColor: isDark? Color(0x121212): Colors.teal,
   title: Row(children: <Widget>[
-    GestureDetector(
+    /*GestureDetector(
     child: Container(
       child:CircleImage("assets/kanishg.jpg", 35),
       padding: EdgeInsets.only(right: 12)
@@ -62,18 +62,22 @@ return PreferredSize(
       onTap: (){
         showAccountselector(context);
       },
-      ),
+      ),*/
   Text(title,style: TextStyle(fontFamily: "Sans"),)],),
   actions: <Widget>[
-    
+    IconButton(
+      icon:Image.asset("assets/exam.png",height: 24,width: 24,),
+
+      onPressed: null),
+
     PopupMenuButton(itemBuilder: (BuildContext){
       return <PopupMenuItem>[
         PopupMenuItem(child: Text("Join Class"),),
         PopupMenuItem(child: Text("Create Class"),),
+        PopupMenuItem(child: Text("Settings"),),
         ];},
-      icon:Icon( Icons.add),
+      
       ),
-
     ],
   ),
 ) ;
