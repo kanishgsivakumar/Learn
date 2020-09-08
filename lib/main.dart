@@ -2,15 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:learn/ui/appbar.dart';
 import 'package:learn/ui/coursecard.dart';
 import 'package:learn/ui/todoscreen.dart';
-void main() => runApp(MyApp());
+import 'package:learn/class/class.dart';
 
-class MyApp extends StatelessWidget {
+
+void main() => runApp(App());
+
+
+class App extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new MyHomePage(title: 'Learn'),
+    return MaterialApp(
+      home:MyHomePage(title: "Blackboard")
     );
-  } 
+  }
 }
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);

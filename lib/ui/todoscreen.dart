@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn/ui/appbar.dart';
-import 'package:learn/ui/coursecard.dart';
-import 'package:learn/ui/coursescreen.dart';
-import 'package:moment/moment.dart';
+import 'package:learn/class/class.dart';
 
 class Work{
   final int code,sub_code;

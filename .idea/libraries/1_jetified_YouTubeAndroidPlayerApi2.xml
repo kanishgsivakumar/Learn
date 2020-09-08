@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="1_jetified-YouTubeAndroidPlayerApi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/app/intermediates/external_file_lib_dex_archives/debug/out/1_jetified-YouTubeAndroidPlayerApi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

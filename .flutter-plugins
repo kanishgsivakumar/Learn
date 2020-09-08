@@ -1,2 +1,8 @@
 # This is a generated file; do not edit or check into version control.
-flutter_youtube=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_youtube-2.0.0/
+cloud_firestore=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.12.11/
+firebase_analytics=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-5.0.16/
+firebase_analytics_web=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.1.1/
+firebase_auth=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.14.0+9/
+firebase_core=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/
+firebase_core_web=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+flutter_youtube=/home/kanishga/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_youtube-2.0.0+1/

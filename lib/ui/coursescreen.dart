@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn/ui/coursecard.dart';
+import 'package:learn/class/class.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
 
 
