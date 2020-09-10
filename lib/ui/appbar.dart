@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-
+import 'package:learn/ui/elistscreen.dart';
+import 'package:learn/ui/my_flutter_app_icons.dart';
 
 Widget CircleImage(String url,double size) {
   return Container(
@@ -66,9 +67,17 @@ return PreferredSize(
   Text(title,style: TextStyle(fontFamily: "Sans"),)],),
   actions: <Widget>[
     IconButton(
-      icon:Image.asset("assets/exam.png",height: 24,width: 24,),
-
-      onPressed: null),
+      icon:Icon(MyFlutterApp.edit),
+      
+      tooltip: "Tests",
+      onPressed: (){
+        Navigator.push(
+          context, 
+          MaterialPageRoute(
+           builder: (context) => ElistPage()
+          )
+        );
+      }),
 
     PopupMenuButton(itemBuilder: (BuildContext){
       return <PopupMenuItem>[

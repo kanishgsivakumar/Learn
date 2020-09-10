@@ -20,18 +20,20 @@ class Course{
 class Video {
   final String name,id;
   final  bool watched = false;
+  final int dur;
   Video({
     Key key,
     @required this.name,
-    @required this.id
+    @required this.id,
+    @required this.dur
   });
 }
 final samplevideo = [
-  Video(name: "Lecture 1 : Introduction", id:"TP1_F3IVjBc" ),
-  Video(name: "Lecture 2 : Processors", id:"Lkk7h13s_jA" ),
-  Video(name: "Lecture 3 : General Purpose Asic Processors", id:"docZGkYbruw" ),
-  Video(name: "Lecture 4 : Designing Single Purpose Processor", id:"G_YfGR1yKSk" ),
-  Video(name: "Lecture 5 : Optimization Issues", id:"V53wURxHQVQ" ),
+  Video(name: "Lecture 1 : Introduction", id:"TP1_F3IVjBc",dur: 35),
+  Video(name: "Lecture 2 : Processors", id:"Lkk7h13s_jA",dur : 45 ),
+  Video(name: "Lecture 3 : General Purpose Asic Processors", id:"docZGkYbruw" ,dur: 45),
+  Video(name: "Lecture 4 : Designing Single Purpose Processor", id:"G_YfGR1yKSk",dur: 45 ),
+  Video(name: "Lecture 5 : Optimization Issues", id:"V53wURxHQVQ" ,dur: 45),
   
 ];
 final mycourses = [

@@ -65,7 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.only(top: 16),
                 physics: BouncingScrollPhysics(),
                 itemCount: 3,
-                
                 itemBuilder: (BuildContext context, int index) {
                 return notificaton_card(context,index,isDark);
                },
@@ -84,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
           );
             },
             backgroundColor:Colors.blueAccent[200],
-            icon: Icon(Icons.class_),
+            icon: Icon(Icons.assignment),
+            tooltip: "TO-DO List",
             label: Text("To Do"),
           ),
           bottomNavigationBar:  BottomAppBar(

@@ -1,0 +1,11 @@
+.dart_tool/
+build/
+.flutter-plugins-dependencies
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/.filecache
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/app.dill
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/kernel_snapshot.d
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/outputs.json
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/.filecache
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/app.dill
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/kernel_snapshot.d
+.dart_tool/flutter_build/04903da0637f551fb834227a51c8f257/outputs.json

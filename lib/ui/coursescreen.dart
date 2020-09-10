@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:learn/class/class.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
@@ -61,7 +62,6 @@ class _CoursePageState extends State<CoursePage> {
               tag : 'coursename'+index.toString(),
               child:Text(mycourses[index].subject,
                       overflow: TextOverflow.fade,
-                      
                       textAlign: TextAlign.center,
                       softWrap: true,
                       style: TextStyle(
@@ -107,55 +107,36 @@ class _CoursePageState extends State<CoursePage> {
             children: <Widget>[
               Container(
                 child:ListView.builder(
-                  padding: EdgeInsets.only(top: 24),
-                  itemCount: mycourses[index].v_list.length,
+                  itemCount: mycourses[index].v_list.length ,
                   itemBuilder:(context,count){
-                    return GestureDetector(
-                     child :Container(
-                       alignment: Alignment.center,
-                      height: 120,
-                      margin: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: isDark ? Colors.white30 : Colors.black54),
-                        borderRadius: BorderRadius.all(Radius.circular(8))
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Padding(
-                            child:Icon(Icons.play_circle_outline,
-                            size: 40,
-                            color:isDark? Colors.blueAccent:Colors.blue,
-                            ),
-                            padding: EdgeInsets.symmetric(horizontal: 16),
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children:<Widget>[
-                            Flexible(
-                            child:Text(
-                              mycourses[index].v_list[count].name,
-                              overflow: TextOverflow.fade,
-                              softWrap: false,
-                              style: TextStyle(
-                              fontSize: 14,
-                              fontStyle: FontStyle.normal,
-                              decoration: TextDecoration.none,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "Roboto",
-                              color: isDark?Colors.white: Colors.black,
-                              ),
-                            ),
-                          
-                            )
-                            ])
-                        ],
-                      ),
-                      )
-                     ,
-                     onTap: (){
-                        playYoutubeVideo(mycourses[index].v_list[count].id);
-                     },
-                    );
+                    return ListTile(
+                       leading: Icon(Icons.play_circle_outline,
+                       color: isDark?Colors.blueAccent:Colors.blue,
+                       size: 36,
+                       ),
+                       title: Text(mycourses[index].v_list[count].name,
+                       style: TextStyle(
+                        fontSize: 16,
+                        fontStyle: FontStyle.normal,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Roboto",
+                        color: isDark?Colors.white: Colors.black,
+                        ),
+                       ),
+                       subtitle: Row(
+                         children: [
+                           Text((mycourses[index].v_list[count].dur).toString()+" Minutes",
+                           style: TextStyle(
+                             color: isDark?Colors.white70: Colors.black54,
+                           ),
+                           ),
+                         ],
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                       ),
+                       onTap:() {playYoutubeVideo(mycourses[index].v_list[count].id);}
+                     );
+
                   }
                   )
               ),

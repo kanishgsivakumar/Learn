@@ -35,10 +35,10 @@ Widget notificaton_card(BuildContext context ,int index,bool isDark){
                     Container(
                     width:350,
                     padding: EdgeInsets.only(top:8,bottom: 8),
-                    alignment: Alignment.center,
+                    alignment: Alignment.centerLeft,
                     child : Hero(
                       tag: 'coursename'+index.toString(),
-                      child:Text("College declares 3 days leave ths weekend",
+                      child:Text("Semester 4 results are out",
                       overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 22,
